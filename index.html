@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Money Tracker</title>
+  
+</head>
+<body>
+  <header>
+    <h1>Money Tracker</h1>
+  </header>
+  
+  <div class="container">
+    <div class="image-section">
+      <img src="pic1.png" alt="Cat Image">
+    </div>
+    
+    <div class="form-section">
+      <div>
+        <h4>Income</h4>
+        <label for="monthlyIncome"><b>Monthly Income :</b></label><span class="break">
+        <input type="number" id="monthlyIncome"></span>
+      </div>
+      
+      <div>
+        <h4>Expenses</h4>
+        <label for="houseRent"><b>House Rent :</b></label>
+        <span class="break1">
+        <input type="number" id="houseRent">
+        </span>
+      </div>
+      
+      <div>
+        <label for="carRent"><b>Car Rent :</b></label>
+        <span class="break2">
+        <input type="number" id="carRent">
+        </span>
+      </div>
+      
+      <div>
+        <label for="electricBill"><b>Electric Bill :</b></label>
+        <span class="break3">
+        <input type="number" id="electricBill">
+        </span>
+      </div>
+      
+        <span class="hello"><button class="hello" onclick="calculateBalance()">Calculate Balance</button></span>
+  
+     
+      
+      
+      <div class="result">
+        <h3>Balance :<span id="balance"> 0</span></h3>
+        
+      </div>
+      <div class="result">
+        <h3>Total Expenses :<span id="totalExpenses"> 0</span></h3>
+       
+      </div>
+      
+      <div>
+        <label for="savingsPercentage"><b style="color: green;">Savings (%) :</b></label>
+        <span class="break4">
+        <input type="number" id="savingsPercentage">
+        </span>
+      </div>
+      
+      <span class="hello"><button onclick="calculateRemainingBalance()">Calculate Remaining Balance</button></span>
+      
+      <div class="result">
+        <h3>Saving Amount :<span id="savingAmount"> 0</span></h3>
+        
+      </div>
+
+      <div class="result">
+        <h3>Remaining Balance :<span id="remainingBalance"> 0</span></h3>
+        
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
