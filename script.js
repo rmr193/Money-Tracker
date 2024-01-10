@@ -4,7 +4,12 @@ function calculateBalance() {
   const carRent = parseFloat(document.getElementById('carRent').value);
   const electricBill = parseFloat(document.getElementById('electricBill').value);
 
-
+  if (monthlyIncome < 0 || houseRent < 0 || carRent < 0 || electricBill < 0) {
+    document.getElementById('balance').textContent = 'Negative value is not allowed';
+    document.getElementById('totalExpenses').textContent = 'Negative value is not allowed';
+    document.getElementById('savingAmount').textContent = 'Negative value is not allowed';
+    return;
+  }
 
   const totalExpenditure = houseRent + carRent + electricBill;
   const balance = monthlyIncome - totalExpenditure;
